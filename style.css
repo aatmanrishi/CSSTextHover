@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+html{
+    font-size: 62.5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+:root{
+    --background-color:rgb(227,227,253);
+    --black:#20001;
+    --white:#fff ;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+
+.main{
+    width: inherit;
+    height:inherit;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+h1{
+    position: absolute;
+    font-size: 10rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 8px;
+    text-shadow: 0 0.5rem 1rem rgba(163,163,247,0.6);
+    transition: all 0.3s linear;
+}
+h1:first-child{
+    color: var(--white);
+}
+h1:last-child{
+    color: var(--black);
+    clip-path: polygon(54% 46%, 100% 0, 100% 100%, 0% 100%);
+    background-color:  var(--background-color);
+}
+
+h1:last-child:hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+
+}
+h1:first-child:hover ~ h1{
+    clip-path: polygon(0 0, 100% 0, 0 0, 100% 0);
+
+
+}
